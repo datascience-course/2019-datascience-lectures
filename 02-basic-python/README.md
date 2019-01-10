@@ -1,6 +1,6 @@
 # Introduction to Data Science - Lecture 2
 
-Hi there, welcome to our first coding lecture. We will be using Python, a popular data science programming language in the labs, homeworks, and projects. As part of Homework 0, you should have already setup Python, IPython and Jupyter notebooks, so it's time to get started!
+Hi there, welcome to our first coding lecture. We will be using Python, a popular data science programming language in the lectures, homeworks, and projects. As part of Homework 0, you should have already setup Python, IPython and Jupyter notebooks, so it's time to get started!
 
 ## Executing your first program
 
@@ -13,13 +13,13 @@ $ python
 You'll see something like that:
 
 ```bash
-$ $python
+$ python
 Python 3.7.2 (default, Dec 29 2018, 00:00:04)
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda custom (64-bit) on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-What does this tell us? It shows us the version number of Python (3.7.2), and we can see that we've installed Anaconda. At the end of this statement, you see the thre >>> signs: these indicate a promt, but it looks different from your console promt ($), to indicate you're in an interactive python environment.
+What does this tell us? It shows us the version number of Python (3.7.2), and we can see that we've installed Anaconda. At the end of this statement, you see the three `>>>` signs: these indicate a promt, but it looks different from your console promt (`$`), to indicate you're in an interactive python environment.
 
 There are two fundamental ways you can run Python: in interactive mode (what we're doing here) or in batch mode. In interactive mode you write your program interactively, i.e., each new statement is interpreted as you type it. If you just run ```python``` without any other parameter, you enter the **interactive** mode. Let's write our very first program:
 
@@ -50,7 +50,13 @@ Let's define our first variable. Type
 >>> my_string_var = "Are you still spinning?"
 ```
 
-This statement is executed without any feedback. What you're doing here, intuitively, is that first, you create a new variable of type string with the name ```my_string_var```, and then you assign a value to it, "Are you still spinning?". We now can print this variable:
+This statement is executed without any feedback. What you're doing here, intuitively, is that first, you create a new variable of type string with the name ```my_string_var```, and then you assign a value to it, "Are you still spinning?".
+
+
+Note that the equals sign `=` is NOT a test for equality here, but an ASSIGNMENT. This can be confusing for beginning programmers. Equality is tested with a double equals sign `==` in many programming languages including python. Arguably, a different assignment operator such as `:=` would be a better idea and is implemented in other programming languages.
+
+
+We now can print this variable:
 
 ```python
 >>> print(my_string_var)
@@ -59,7 +65,7 @@ Are you still spinning?
 
 which produces the result we expected!
 
-There are many different types of variables, not only strings. For example, Python has three different data types for numbers (integers, floats - that represent real numbers, and complex). Check out the details about the built-in data types [here](https://docs.python.org/3/library/stdtypes.html).
+There are many different types of variables, not only strings. For example, Python has three different data types for numbers (integers, floats – that represent real numbers, and complex). Check out the details about the built-in data types [here](https://docs.python.org/3/library/stdtypes.html).
 
 Let's start with a simple example:
 
@@ -86,7 +92,7 @@ The data types of `a` and `b`, however, are subtly different. `a` is an integer 
 <class 'str'>
 ```
 
-Python supports many operations, including divisions, type conversions, etc. - we'll explore those soon.
+Python supports many operations, including mathemtical operations (addition, substraction, division, modulo), type conversions, etc. - we'll explore those soon.
 
 ### Exercise: Data types and operations
 
@@ -111,18 +117,17 @@ Now, open up your favorite text editor (if you don't have one, check out, e.g., 
 You can also copy and paste this code into the file:
 
 ```python
-def doubleNumber(a):
+def double_number(a):
     # btw, here is a comment! Use the # symbol to add comments or temporarily remove code
     # shorthand operator for 'a = a * 2'
-    # also btw - the indentation here matters!
     a *= 2
     return a;
 
-print(doubleNumber(3))
-print(doubleNumber(14.22))
+print(double_number(3))
+print(double_number(14.22))
 ```
 
-Here we've also defined or first own function! We'll go into details about functions at a later time. For now, just notice that the indentation matters!
+Here we've also defined or first function! We'll go into details about functions at a later time. For now, just notice that the indentation matters!
 
 Now, run
 
@@ -134,7 +139,7 @@ $ python first_steps.py
 
 What happened here? Python executed the commands in the file, and then terminated. You saw the result, but it was not interactive anymore, but executed in a couple of milliseconds.
 
-Larger and bigger programs are commonly written using source code files and are not run interactively. They will read data from files and wait for user input, etc.
+Larger and bigger programs are commonly written using source code files and are not run interactively. They will read data from files, wait for user input, etc.
 
 ### Exercise: Running Programs
 
